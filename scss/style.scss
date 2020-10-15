@@ -1,9 +1,10 @@
 $light-blue: #cdf8f8;
 $pink-color: #d38888;
-$yellow-color: #feffcc;
+$yellow-color: #feffd5;
 $purple-color: #dfdaff;
 $light-green: #d9fff2;
 $pastel-blue: #c4eeff;
+$dark-purle: #a768fa;
 
 * {
   box-sizing: border-box;
@@ -14,6 +15,7 @@ $pastel-blue: #c4eeff;
 body {
   font-family: "Roboto", sans-serif;
 }
+
 // Global
 ul {
   list-style: none;
@@ -21,15 +23,37 @@ ul {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #000;
 }
 
 img {
   width: 100%;
 }
+/* BACK TO TOP BUTTON */
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 100; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: transparent; /* Set a background color*/
+  color: $pink-color; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 5px; /* Some padding */
+  border-radius: 15px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
 
+#myBtn:hover {
+  color: #777;
+  transition: all 500ms ease;
+}
+/* END BACK TO TOP BUTTON */
 // Header
 header {
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,6 +61,7 @@ header {
   padding: 0.5rem 2rem;
   position: fixed;
   width: 100%;
+  z-index: 1000;
 
   .hamburger {
     display: none;
@@ -45,6 +70,7 @@ header {
   .logo {
     font-family: "Satisfy", cursive;
     font-size: 3rem;
+    // z-index: 1;
 
     a {
       color: $pink-color;
@@ -140,9 +166,77 @@ header {
   }
 }
 
+// Test Page
+.test-content {
+  padding-top: 10rem;
+
+  ol {
+    list-style-type: lower-alpha;
+  }
+
+  .test-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: $dark-purle;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-style: italic;
+      font-weight: normal;
+    }
+  }
+
+  .box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 3rem;
+    line-height: 2;
+
+    & > div {
+      margin: 1rem;
+      padding: 1rem 2rem;
+      border-radius: 1.5rem;
+
+      h3 {
+        padding: 1rem 0;
+      }
+      ol {
+        padding: 0 1rem;
+      }
+    }
+  }
+
+  .box1 .question-wrapper {
+    background: $yellow-color;
+    border: 4px dotted darken($yellow-color, 45%);
+  }
+  .box2 .question-wrapper {
+    background: $pastel-blue;
+    border: 4px dotted darken($pastel-blue, 45%);
+  }
+  .box3 .question-wrapper {
+    background: $purple-color;
+    border: 4px dotted darken($purple-color, 45%);
+  }
+  .box4 .question-wrapper {
+    background: $light-green;
+    border: 4px dotted darken($light-green, 45%);
+  }
+  .box5 .question-wrapper {
+    background: $yellow-color;
+    border: 4px dotted darken($yellow-color, 45%);
+  }
+}
+
 // Media Queries
 @media (max-width: 850px) {
   header {
+    .logo {
+      z-index: 1;
+    }
     .hamburger {
       display: block;
       font-size: 1.7rem;
@@ -159,7 +253,7 @@ header {
       position: fixed;
       top: 0;
       right: 0;
-      width: 30%;
+      width: 50%;
       height: 80%;
 
       ul {
@@ -227,6 +321,12 @@ header {
       &-image {
         flex: 0 1 auto;
       }
+    }
+  }
+
+  .test-content {
+    .box {
+      display: block;
     }
   }
 }
