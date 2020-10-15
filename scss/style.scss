@@ -209,6 +209,7 @@ header {
   .showcase {
     .showcase-inner {
       flex-direction: column;
+      justify-content: space-between;
 
       &-text {
         text-align: center;
