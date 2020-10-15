@@ -253,8 +253,9 @@ header {
       position: fixed;
       top: 0;
       right: 0;
-      width: 50%;
-      height: 80%;
+      width: 100%;
+      height: 90%;
+      z-index: 1;
 
       ul {
         width: 100%;
@@ -272,10 +273,12 @@ header {
           align-items: center;
           transform: translateX(100%);
           transition: transform 0.4s ease;
+          border: $pink-color solid 1px;
 
           &:nth-child(4) {
             background: $yellow-color;
             transition-delay: 0.4s;
+            border-bottom-width: 2px;
           }
           &:nth-child(3) {
             background: $purple-color;
@@ -303,6 +306,12 @@ header {
 }
 
 @media (max-width: 600px) {
+  header {
+    .logo {
+      font-size: 1.5rem;
+    }
+  }
+
   .showcase {
     .showcase-inner {
       flex-direction: column;
@@ -327,6 +336,7 @@ header {
   .test-content {
     .box {
       display: block;
+      padding: 0 1rem;
     }
   }
 }
