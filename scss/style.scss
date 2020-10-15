@@ -14,7 +14,7 @@ $dark-purle: #a768fa;
 
 body {
   font-family: "Roboto", sans-serif;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
 }
 
 // Global
@@ -163,6 +163,32 @@ header {
         text-align: right;
         font-weight: 500;
       }
+    }
+  }
+}
+// Videos Page
+.video-main {
+  width: 100%;
+  padding-top: 10em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  .hero {
+    font-size: 2rem;
+    font-family: "Satisfy", cursive;
+    margin: 2rem 0;
+    color: $dark-purle;
+  }
+  .video-box {
+    width: 100%;
+    margin: auto;
+
+    h1 {
+      margin: 1rem 0;
+      color: $pink-color;
     }
   }
 }
