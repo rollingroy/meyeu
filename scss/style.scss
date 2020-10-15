@@ -214,10 +214,15 @@ header {
 
       &-text {
         text-align: center;
+        flex: 0 1 auto;
 
         .italic {
           text-align: center;
         }
+      }
+
+      &-image {
+        flex: 0 1 auto;
       }
     }
   }
