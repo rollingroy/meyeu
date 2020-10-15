@@ -236,16 +236,6 @@ header .nav ul a:hover::before {
   color: #a768fa;
 }
 
-.video-main .video-box {
-  width: 100%;
-  margin: auto;
-}
-
-.video-main .video-box h1 {
-  margin: 1rem 0;
-  color: #d38888;
-}
-
 .test-content {
   padding-top: 10rem;
 }
