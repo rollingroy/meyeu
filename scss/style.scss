@@ -48,7 +48,7 @@ img {
 }
 
 #myBtn:hover {
-  color: #777;
+  color: lighten($pink-color, 10%);
   transition: all 500ms ease;
 }
 /* END BACK TO TOP BUTTON */

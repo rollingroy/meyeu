@@ -54,7 +54,7 @@ img {
 }
 
 #myBtn:hover {
-  color: #777;
+  color: #e1adad;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
