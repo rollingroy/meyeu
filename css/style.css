@@ -236,24 +236,21 @@ header .nav ul a:hover::before {
 .test-content .box {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   padding: 0 3rem;
   line-height: 2;
 }
 
 .test-content .box > div {
   margin: 1rem;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   border-radius: 1.5rem;
 }
 
-.test-content .box > div h3 {
-  padding: 1rem 0;
-}
-
 .test-content .box > div ol {
-  padding: 0 1rem;
+  display: inline-block;
+  margin-left: 1.2rem;
 }
 
 .test-content .box1 .question-wrapper {

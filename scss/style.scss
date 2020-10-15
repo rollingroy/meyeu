@@ -192,20 +192,18 @@ header {
 
   .box {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     padding: 0 3rem;
     line-height: 2;
 
     & > div {
       margin: 1rem;
-      padding: 1rem 2rem;
+      padding: 1rem 3rem;
       border-radius: 1.5rem;
 
-      h3 {
-        padding: 1rem 0;
-      }
       ol {
-        padding: 0 1rem;
+        display: inline-block;
+        margin-left: 1.2rem;
       }
     }
   }
