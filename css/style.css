@@ -73,7 +73,6 @@ header {
           justify-content: space-between;
   background-color: #cdf8f8;
   padding: 0.3rem 2rem;
-  position: fixed;
   width: 100%;
   z-index: 5;
 }
@@ -143,7 +142,7 @@ header .nav ul a:hover::before {
 }
 
 .showcase {
-  padding: 9em 0 3rem 0;
+  padding: 3em 0 3rem 0;
   width: 80%;
   margin: auto;
   height: 100%;
@@ -212,7 +211,7 @@ header .nav ul a:hover::before {
 
 .video-main {
   width: 100%;
-  padding-top: 10em;
+  padding-top: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,7 +242,7 @@ header .nav ul a:hover::before {
 }
 
 .test-content {
-  padding-top: 8rem;
+  padding-top: 3rem;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03rem;
 }
@@ -279,13 +278,18 @@ header .nav ul a:hover::before {
 
 .test-content .box > div {
   margin: 1rem;
-  padding: 1rem 3rem;
+  padding: 1rem 1.5rem;
   border-radius: 1.5rem;
+}
+
+.test-content .box > div h3 {
+  font-size: 1.2rem;
 }
 
 .test-content .box > div ol {
   display: inline-block;
   margin-left: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .test-content .box1 .question-wrapper {
@@ -330,7 +334,7 @@ header .nav ul a:hover::before {
     display: none;
   }
   header .nav ul {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     width: 100%;
@@ -437,5 +441,17 @@ header .nav ul a:hover::before {
   }
   .test-content .test-title h2 {
     font-size: 1.2rem;
+  }
+  iframe {
+    width: 400px;
+    height: 220px;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 500px) {
+  iframe {
+    width: 300px;
+    height: 165px;
   }
 }

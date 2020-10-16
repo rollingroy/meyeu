@@ -60,7 +60,7 @@ header {
   justify-content: space-between;
   background-color: $light-blue;
   padding: 0.3rem 2rem;
-  position: fixed;
+  // position: fixed;
   width: 100%;
   z-index: 5;
 
@@ -122,7 +122,7 @@ header {
 
 // Showcase
 .showcase {
-  padding: 9em 0 3rem 0;
+  padding: 3em 0 3rem 0;
   width: 80%;
   margin: auto;
   height: 100%;
@@ -169,7 +169,7 @@ header {
 // Videos Page
 .video-main {
   width: 100%;
-  padding-top: 10em;
+  padding-top: 3em;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -194,7 +194,7 @@ header {
 
 // Test Page
 .test-content {
-  padding-top: 8rem;
+  padding-top: 3rem;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03rem;
 
@@ -226,12 +226,17 @@ header {
 
     & > div {
       margin: 1rem;
-      padding: 1rem 3rem;
+      padding: 1rem 1.5rem;
       border-radius: 1.5rem;
+
+      h3 {
+        font-size: 1.2rem;
+      }
 
       ol {
         display: inline-block;
         margin-left: 1.2rem;
+        font-size: 1.2rem;
       }
     }
   }
@@ -287,7 +292,7 @@ header {
       // position: relative;
 
       ul {
-        position: fixed;
+        position: absolute;
         top: 0;
         right: 0;
         width: 100%;
@@ -383,5 +388,18 @@ header {
         font-size: 1.2rem;
       }
     }
+  }
+
+  iframe {
+    width: 400px;
+    height: 220px;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 500px) {
+  iframe {
+    width: 300px;
+    height: 165px;
   }
 }
