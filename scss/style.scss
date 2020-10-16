@@ -71,7 +71,7 @@ header {
   .logo {
     font-family: "Satisfy", cursive;
     font-size: 3rem;
-    // z-index: 1;
+    z-index: 1;
 
     a {
       color: $pink-color;
@@ -245,13 +245,34 @@ header {
     background: $yellow-color;
     border: 4px dotted darken($yellow-color, 45%);
   }
+
+  .box6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #ffe3f6;
+    width: 85%;
+    margin: 2rem auto;
+    border-radius: 2rem;
+    .decor {
+      img {
+        width: 70%;
+      }
+    }
+
+    .question-wrapper {
+      margin: 2rem 0;
+      padding: 1rem 1rem;
+    }
+  }
 }
 
 // Media Queries
 @media (max-width: 850px) {
   header {
     .logo {
-      z-index: 1;
+      z-index: 5;
     }
     .hamburger {
       display: block;
@@ -325,6 +346,7 @@ header {
   header {
     .logo {
       font-size: 2.2rem;
+      z-index: 1;
     }
   }
 

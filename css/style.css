@@ -85,6 +85,7 @@ header .hamburger {
 header .logo {
   font-family: "Satisfy", cursive;
   font-size: 3rem;
+  z-index: 1;
 }
 
 header .logo a {
@@ -304,9 +305,35 @@ header .nav ul a:hover::before {
   border: 4px dotted #e9ef00;
 }
 
+.test-content .box6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  background-color: #ffe3f6;
+  width: 85%;
+  margin: 2rem auto;
+  border-radius: 2rem;
+}
+
+.test-content .box6 .decor img {
+  width: 70%;
+}
+
+.test-content .box6 .question-wrapper {
+  margin: 2rem 0;
+  padding: 1rem 1rem;
+}
+
 @media (max-width: 850px) {
   header .logo {
-    z-index: 1;
+    z-index: 5;
   }
   header .hamburger {
     display: block;
@@ -394,6 +421,7 @@ header .nav ul a:hover::before {
 @media (max-width: 600px) {
   header .logo {
     font-size: 2.2rem;
+    z-index: 1;
   }
   .showcase .showcase-inner {
     -webkit-box-orient: vertical;
