@@ -13,8 +13,9 @@ $dark-purle: #a768fa;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Mali", sans-serif;
   padding-bottom: 5rem;
+  overflow-x: hidden;
 }
 
 // Global
@@ -59,62 +60,61 @@ header {
   align-items: center;
   justify-content: space-between;
   background-color: $light-blue;
-  padding: 0.5rem 2rem;
-  position: fixed;
+  padding: 1rem 2rem;
+  // position: fixed;
   width: 100%;
-  z-index: 1000;
+  z-index: 5;
+}
+.hamburger {
+  display: none;
+}
 
-  .hamburger {
-    display: none;
+.logo {
+  font-family: "Satisfy", cursive;
+  font-size: 2.5rem;
+  // z-index: 1;
+
+  a {
+    color: $pink-color;
   }
+}
 
-  .logo {
-    font-family: "Satisfy", cursive;
-    font-size: 3rem;
-    z-index: 1;
+.nav {
+  ul {
+    display: flex;
+
+    li {
+      padding: 2rem 1rem;
+    }
 
     a {
+      padding: 0.3rem 0;
+      text-transform: uppercase;
       color: $pink-color;
-    }
-  }
+      font-weight: 500;
+      letter-spacing: 0.15rem;
+      position: relative;
+      transition: 0.5s transform ease;
 
-  .nav {
-    ul {
-      display: flex;
-
-      li {
-        padding: 2rem 1rem;
+      &:hover {
+        transform: scale(1.2);
       }
 
-      a {
-        padding: 0.3rem 0;
-        text-transform: uppercase;
-        color: $pink-color;
-        font-weight: 500;
-        letter-spacing: 0.15rem;
-        position: relative;
-        transition: 0.5s transform ease;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $pink-color;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s ease;
+      }
 
-        &:hover {
-          transform: scale(1.2);
-        }
-
-        &::before {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 2px;
-          background: $pink-color;
-          transform: scaleX(0);
-          transform-origin: left;
-          transition: transform 0.5s ease;
-        }
-
-        &:hover::before {
-          transform: scaleX(1);
-        }
+      &:hover::before {
+        transform: scaleX(1);
       }
     }
   }
@@ -122,7 +122,7 @@ header {
 
 // Showcase
 .showcase {
-  padding: 9em 0 3rem 0;
+  padding: 3em 0 3rem 0;
   width: 80%;
   margin: auto;
   height: 100%;
@@ -169,7 +169,7 @@ header {
 // Videos Page
 .video-main {
   width: 100%;
-  padding-top: 10em;
+  padding-top: 3em;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -178,15 +178,25 @@ header {
 
   .hero {
     font-size: 2rem;
-    font-family: "Satisfy", cursive;
+    font-family: "Mali", cursive;
     margin: 2rem 0;
     color: $dark-purle;
+  }
+
+  .video-wrapper {
+    h2 {
+      color: $pink-color;
+      font-size: 2rem;
+      font-weight: normal;
+    }
   }
 }
 
 // Test Page
 .test-content {
-  padding-top: 10rem;
+  padding-top: 3rem;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.03rem;
 
   ol {
     list-style-type: lower-alpha;
@@ -196,6 +206,7 @@ header {
     text-align: center;
     margin-bottom: 2rem;
     color: $dark-purle;
+    font-family: "Mali", cursive;
 
     h1 {
       font-size: 3rem;
@@ -211,16 +222,21 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 3rem;
-    line-height: 2;
+    line-height: 1.7;
 
     & > div {
       margin: 1rem;
-      padding: 1rem 3rem;
+      padding: 1rem 1.5rem;
       border-radius: 1.5rem;
+
+      h3 {
+        font-size: 1.2rem;
+      }
 
       ol {
         display: inline-block;
         margin-left: 1.2rem;
+        font-size: 1.2rem;
       }
     }
   }
@@ -272,7 +288,8 @@ header {
 @media (max-width: 850px) {
   header {
     .logo {
-      z-index: 5;
+      z-index: 2;
+      transition: all 0.5s ease;
     }
     .hamburger {
       display: block;
@@ -287,16 +304,20 @@ header {
     }
 
     .nav {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 90%;
-      z-index: 1;
+      // position: fixed;
+      // top: 0;
+      // right: 0;
+      // width: 100%;
+      // height: 90%;
+      // z-index: 1;
+      // position: relative;
 
       ul {
+        position: absolute;
+        top: 0;
+        right: 0;
         width: 100%;
-        height: 100%;
+        height: 90%;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
@@ -335,6 +356,10 @@ header {
     &.open .nav ul li {
       transform: translateX(0);
     }
+
+    &.open .logo {
+      opacity: 0;
+    }
   }
 
   .showcase {
@@ -345,8 +370,7 @@ header {
 @media (max-width: 600px) {
   header {
     .logo {
-      font-size: 2.2rem;
-      z-index: 1;
+      font-size: 1.8rem;
     }
   }
 
@@ -376,5 +400,27 @@ header {
       display: block;
       padding: 0 1rem;
     }
+
+    .test-title {
+      h1 {
+        font-size: 2.2rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  iframe {
+    width: 400px;
+    height: 220px;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 500px) {
+  iframe {
+    width: 300px;
+    height: 165px;
   }
 }

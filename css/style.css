@@ -6,8 +6,9 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Mali", sans-serif;
   padding-bottom: 5rem;
+  overflow-x: hidden;
 }
 
 ul {
@@ -72,37 +73,35 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #cdf8f8;
-  padding: 0.5rem 2rem;
-  position: fixed;
+  padding: 1rem 2rem;
   width: 100%;
-  z-index: 1000;
+  z-index: 5;
 }
 
-header .hamburger {
+.hamburger {
   display: none;
 }
 
-header .logo {
+.logo {
   font-family: "Satisfy", cursive;
-  font-size: 3rem;
-  z-index: 1;
+  font-size: 2.5rem;
 }
 
-header .logo a {
+.logo a {
   color: #d38888;
 }
 
-header .nav ul {
+.nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header .nav ul li {
+.nav ul li {
   padding: 2rem 1rem;
 }
 
-header .nav ul a {
+.nav ul a {
   padding: 0.3rem 0;
   text-transform: uppercase;
   color: #d38888;
@@ -115,12 +114,12 @@ header .nav ul a {
   transition: 0.5s transform ease, 0.5s -webkit-transform ease;
 }
 
-header .nav ul a:hover {
+.nav ul a:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-header .nav ul a::before {
+.nav ul a::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -138,13 +137,13 @@ header .nav ul a::before {
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-header .nav ul a:hover::before {
+.nav ul a:hover::before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
 
 .showcase {
-  padding: 9em 0 3rem 0;
+  padding: 3em 0 3rem 0;
   width: 80%;
   margin: auto;
   height: 100%;
@@ -213,7 +212,7 @@ header .nav ul a:hover::before {
 
 .video-main {
   width: 100%;
-  padding-top: 10em;
+  padding-top: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,13 +231,21 @@ header .nav ul a:hover::before {
 
 .video-main .hero {
   font-size: 2rem;
-  font-family: "Satisfy", cursive;
+  font-family: "Mali", cursive;
   margin: 2rem 0;
   color: #a768fa;
 }
 
+.video-main .video-wrapper h2 {
+  color: #d38888;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
 .test-content {
-  padding-top: 10rem;
+  padding-top: 3rem;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.03rem;
 }
 
 .test-content ol {
@@ -249,6 +256,7 @@ header .nav ul a:hover::before {
   text-align: center;
   margin-bottom: 2rem;
   color: #a768fa;
+  font-family: "Mali", cursive;
 }
 
 .test-content .test-title h1 {
@@ -266,18 +274,23 @@ header .nav ul a:hover::before {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   padding: 0 3rem;
-  line-height: 2;
+  line-height: 1.7;
 }
 
 .test-content .box > div {
   margin: 1rem;
-  padding: 1rem 3rem;
+  padding: 1rem 1.5rem;
   border-radius: 1.5rem;
+}
+
+.test-content .box > div h3 {
+  font-size: 1.2rem;
 }
 
 .test-content .box > div ol {
   display: inline-block;
   margin-left: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .test-content .box1 .question-wrapper {
@@ -333,7 +346,9 @@ header .nav ul a:hover::before {
 
 @media (max-width: 850px) {
   header .logo {
-    z-index: 5;
+    z-index: 2;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
   }
   header .hamburger {
     display: block;
@@ -345,17 +360,12 @@ header .nav ul a:hover::before {
   header .hamburger .fa-times {
     display: none;
   }
-  header .nav {
-    position: fixed;
+  header .nav ul {
+    position: absolute;
     top: 0;
     right: 0;
     width: 100%;
     height: 90%;
-    z-index: 1;
-  }
-  header .nav ul {
-    width: 100%;
-    height: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -413,6 +423,9 @@ header .nav ul a:hover::before {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
+  header.open .logo {
+    opacity: 0;
+  }
   .showcase {
     width: 90%;
   }
@@ -420,8 +433,7 @@ header .nav ul a:hover::before {
 
 @media (max-width: 600px) {
   header .logo {
-    font-size: 2.2rem;
-    z-index: 1;
+    font-size: 1.8rem;
   }
   .showcase .showcase-inner {
     -webkit-box-orient: vertical;
@@ -450,5 +462,23 @@ header .nav ul a:hover::before {
   .test-content .box {
     display: block;
     padding: 0 1rem;
+  }
+  .test-content .test-title h1 {
+    font-size: 2.2rem;
+  }
+  .test-content .test-title h2 {
+    font-size: 1.2rem;
+  }
+  iframe {
+    width: 400px;
+    height: 220px;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 500px) {
+  iframe {
+    width: 300px;
+    height: 165px;
   }
 }
