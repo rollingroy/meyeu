@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Mali", sans-serif;
   padding-bottom: 5rem;
 }
 
@@ -231,13 +231,25 @@ header .nav ul a:hover::before {
 
 .video-main .hero {
   font-size: 2rem;
-  font-family: "Satisfy", cursive;
+  font-family: "Mali", cursive;
   margin: 2rem 0;
   color: #a768fa;
 }
 
+.video-main .video-wrapper {
+  width: 100%;
+}
+
+.video-main .video-wrapper h2 {
+  color: #d38888;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
 .test-content {
-  padding-top: 10rem;
+  padding-top: 8rem;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1.5;
 }
 
 .test-content ol {
@@ -248,6 +260,7 @@ header .nav ul a:hover::before {
   text-align: center;
   margin-bottom: 2rem;
   color: #a768fa;
+  font-family: "Mali", cursive;
 }
 
 .test-content .test-title h1 {
@@ -306,7 +319,9 @@ header .nav ul a:hover::before {
 
 @media (max-width: 850px) {
   header .logo {
-    z-index: 1;
+    z-index: 2;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
   }
   header .hamburger {
     display: block;
@@ -386,6 +401,9 @@ header .nav ul a:hover::before {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
+  header.open .logo {
+    opacity: 0;
+  }
   .showcase {
     width: 90%;
   }
@@ -393,7 +411,7 @@ header .nav ul a:hover::before {
 
 @media (max-width: 600px) {
   header .logo {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
   .showcase .showcase-inner {
     -webkit-box-orient: vertical;
@@ -422,5 +440,11 @@ header .nav ul a:hover::before {
   .test-content .box {
     display: block;
     padding: 0 1rem;
+  }
+  .test-content .test-title h1 {
+    font-size: 2.2rem;
+  }
+  .test-content .test-title h2 {
+    font-size: 1.2rem;
   }
 }

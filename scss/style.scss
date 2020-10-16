@@ -13,7 +13,7 @@ $dark-purle: #a768fa;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Mali", sans-serif;
   padding-bottom: 5rem;
 }
 
@@ -178,15 +178,27 @@ header {
 
   .hero {
     font-size: 2rem;
-    font-family: "Satisfy", cursive;
+    font-family: "Mali", cursive;
     margin: 2rem 0;
     color: $dark-purle;
+  }
+
+  .video-wrapper {
+    width: 100%;
+
+    h2 {
+      color: $pink-color;
+      font-size: 2rem;
+      font-weight: normal;
+    }
   }
 }
 
 // Test Page
 .test-content {
-  padding-top: 10rem;
+  padding-top: 8rem;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1.5;
 
   ol {
     list-style-type: lower-alpha;
@@ -196,6 +208,7 @@ header {
     text-align: center;
     margin-bottom: 2rem;
     color: $dark-purle;
+    font-family: "Mali", cursive;
 
     h1 {
       font-size: 3rem;
@@ -251,7 +264,8 @@ header {
 @media (max-width: 850px) {
   header {
     .logo {
-      z-index: 1;
+      z-index: 2;
+      transition: all 0.5s ease;
     }
     .hamburger {
       display: block;
@@ -314,6 +328,10 @@ header {
     &.open .nav ul li {
       transform: translateX(0);
     }
+
+    &.open .logo {
+      opacity: 0;
+    }
   }
 
   .showcase {
@@ -324,7 +342,7 @@ header {
 @media (max-width: 600px) {
   header {
     .logo {
-      font-size: 2.2rem;
+      font-size: 1.8rem;
     }
   }
 
@@ -353,6 +371,15 @@ header {
     .box {
       display: block;
       padding: 0 1rem;
+    }
+
+    .test-title {
+      h1 {
+        font-size: 2.2rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
     }
   }
 }
