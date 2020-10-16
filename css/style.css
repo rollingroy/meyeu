@@ -72,7 +72,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #cdf8f8;
-  padding: 0.3rem 2rem;
+  padding: 1rem 2rem;
   width: 100%;
   z-index: 5;
 }
