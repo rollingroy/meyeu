@@ -72,10 +72,10 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #cdf8f8;
-  padding: 0.5rem 2rem;
+  padding: 0rem 2rem;
   position: fixed;
   width: 100%;
-  z-index: 1000;
+  z-index: 5;
 }
 
 header .hamburger {
@@ -84,7 +84,7 @@ header .hamburger {
 
 header .logo {
   font-family: "Satisfy", cursive;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 header .logo a {
@@ -236,10 +236,6 @@ header .nav ul a:hover::before {
   color: #a768fa;
 }
 
-.video-main .video-wrapper {
-  width: 100%;
-}
-
 .video-main .video-wrapper h2 {
   color: #d38888;
   font-size: 2rem;
@@ -249,7 +245,7 @@ header .nav ul a:hover::before {
 .test-content {
   padding-top: 8rem;
   font-family: "Roboto", sans-serif;
-  letter-spacing: 1.5;
+  letter-spacing: 0.03rem;
 }
 
 .test-content ol {
@@ -278,7 +274,7 @@ header .nav ul a:hover::before {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   padding: 0 3rem;
-  line-height: 2;
+  line-height: 1.7;
 }
 
 .test-content .box > div {
