@@ -24,6 +24,10 @@ img {
   width: 100%;
 }
 
+.buffer {
+  height: 150px;
+}
+
 .text-md {
   font-size: 1.5rem;
 }
@@ -78,6 +82,7 @@ header {
           justify-content: space-between;
   background-color: #cdf8f8;
   padding: 1rem 2rem;
+  position: fixed;
   width: 100%;
   z-index: 5;
 }
@@ -365,8 +370,10 @@ header {
 }
 
 @media (max-width: 850px) {
+  .buffer {
+    height: 100px;
+  }
   header .logo {
-    z-index: 2;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
@@ -375,13 +382,12 @@ header {
     font-size: 1.7rem;
     color: #d38888;
     cursor: pointer;
-    z-index: 1;
   }
   header .hamburger .fa-times {
     display: none;
   }
   header .nav ul {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 100%;
@@ -397,6 +403,9 @@ header {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     text-align: center;
+    z-index: -1;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
   header .nav ul li {
     width: 100%;
@@ -412,11 +421,10 @@ header {
             align-items: center;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
-    -webkit-transition: -webkit-transform 0.4s ease;
-    transition: -webkit-transform 0.4s ease;
-    transition: transform 0.4s ease;
-    transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
     border: #d38888 solid 1px;
+    padding: 0;
   }
   header .nav ul li:nth-child(4) {
     background: #feffd5;
@@ -438,6 +446,10 @@ header {
     background: #c4eeff;
     -webkit-transition-delay: 0.1s;
             transition-delay: 0.1s;
+  }
+  header.open .nav ul {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   header.open .nav ul li {
     -webkit-transform: translateX(0);
@@ -492,7 +504,6 @@ header {
   iframe {
     width: 400px;
     height: 220px;
-    z-index: 10;
   }
   .box6 > div {
     -webkit-box-orient: vertical;
@@ -514,6 +525,6 @@ header {
 @media (max-width: 500px) {
   iframe {
     width: 300px;
-    height: 165px;
+    height: 185px;
   }
 }
