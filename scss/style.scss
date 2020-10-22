@@ -400,6 +400,14 @@ header {
     &.open .logo {
       opacity: 0;
     }
+
+    &.open .fa-times {
+      display: block;
+    }
+
+    &.open .fa-bars {
+      display: none;
+    }
   }
 
   .showcase {
