@@ -59,3 +59,10 @@ $(document).ready(function () {
     } // End if
   });
 });
+
+const btnToggler = document.querySelector('.btn-toggler');
+const menu = document.querySelector('.menu');
+
+btnToggler.addEventListener('click', function(){
+  menu.classList.toggle('show');
+})
