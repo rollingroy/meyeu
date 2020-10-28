@@ -282,6 +282,53 @@ header {
 }
 
 // Test Page
+.test-menu-toggler {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0.3rem 0.8rem;
+  background-color: $purple-color;
+  border-bottom-right-radius: 7px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: darken($purple-color, 6) 2px solid;
+}
+
+.test-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 2rem 0 0 0;
+  background: $pastel-blue;
+  border: 5px solid darken($pastel-blue, 10);
+  transform: scale(0);
+  transform-origin: top left;
+  transition: all 0.5s ease;
+  z-index: -1;
+
+  &-list {
+    &-item {
+      width: 100%;
+      padding: 1rem 0;
+      border-top: 1px solid darken($pastel-blue, 10);
+
+      a {
+        display: inline-block;
+        padding: 0 1rem;
+        transition: all 0.5s ease;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  &.show {
+    transform: scale(1);
+  }
+}
+
 .test-content {
   padding-top: 3rem;
   font-family: "Roboto", sans-serif;
@@ -397,6 +444,7 @@ header {
       font-size: 1.7rem;
       color: $pink-color;
       cursor: pointer;
+      z-index: 1;
 
       .fa-times {
         display: none;
@@ -414,7 +462,7 @@ header {
         align-items: center;
         justify-content: space-evenly;
         text-align: center;
-        z-index: -1;
+        // z-index: -1;
         transform: translateX(100%);
 
         li {
