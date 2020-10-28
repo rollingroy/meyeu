@@ -481,6 +481,18 @@ header {
       }
     }
   }
+
+  .menu {
+    .menu-list {
+      width: 30vw;
+    }
+
+    &.show {
+      .btn-toggler {
+        transform: translateX(28vw);
+      }
+    }
+  }
 }
 
 @media (max-width: 600px) {
@@ -548,6 +560,18 @@ header {
     .hero {
       h3 {
         font-size: 1.5rem;
+      }
+    }
+  }
+
+  .menu {
+    .menu-list {
+      width: 40vw;
+    }
+
+    &.show {
+      .btn-toggler {
+        transform: translateX(38vw);
       }
     }
   }
