@@ -1,11 +1,6 @@
-$light-blue: #cdf8f8;
-$pink-color: #d38888;
-$yellow-color: #feffd5;
-$purple-color: #dfdaff;
-$light-green: #d9fff2;
-$pastel-blue: #c4eeff;
-$dark-purle: #a768fa;
+@import "config";
 
+// Global
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,50 +12,6 @@ body {
   padding-bottom: 5rem;
   overflow-x: hidden;
 }
-
-// Global
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-img {
-  width: 100%;
-}
-
-.buffer {
-  height: 150px;
-}
-
-.text-md {
-  font-size: 1.5rem;
-}
-/* BACK TO TOP BUTTON */
-#myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 100; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: transparent; /* Set a background color*/
-  color: $pink-color; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 5px; /* Some padding */
-  border-radius: 15px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
-}
-
-#myBtn:hover {
-  color: lighten($pink-color, 10%);
-  transition: all 500ms ease;
-}
-/* END BACK TO TOP BUTTON */
 
 // Fixed Menu
 .menu {
@@ -234,8 +185,8 @@ header {
     }
   }
 }
-// Videos Page
 
+// Videos Page
 .video-main {
   width: 100%;
   padding-top: 3em;
@@ -281,7 +232,7 @@ header {
   }
 }
 
-// Test Page
+// Tests Page
 .test-menu-toggler {
   position: absolute;
   top: 100%;
@@ -430,204 +381,4 @@ header {
   }
 }
 
-// Media Queries
-@media (max-width: 850px) {
-  .buffer {
-    height: 100px;
-  }
-  header {
-    .logo {
-      transition: all 0.5s ease;
-    }
-    .hamburger {
-      display: block;
-      font-size: 1.7rem;
-      color: $pink-color;
-      cursor: pointer;
-      z-index: 1;
-
-      .fa-times {
-        display: none;
-      }
-    }
-
-    .nav {
-      ul {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 90%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        text-align: center;
-        // z-index: -1;
-        transform: translateX(100%);
-
-        li {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          transform: translateX(100%);
-          transition: all 0.4s ease;
-          border: $pink-color solid 1px;
-          // display: none;
-          padding: 0;
-
-          &:nth-child(4) {
-            background: $yellow-color;
-            transition-delay: 0.4s;
-            border-bottom-width: 2px;
-          }
-          &:nth-child(3) {
-            background: $purple-color;
-            transition-delay: 0.3s;
-          }
-          &:nth-child(2) {
-            background: $light-green;
-            transition-delay: 0.2s;
-          }
-          &:nth-child(1) {
-            background: $pastel-blue;
-            transition-delay: 0.1s;
-          }
-        }
-      }
-    }
-
-    &.open .nav ul {
-      transform: translateX(0);
-    }
-    &.open .nav ul li {
-      transform: translateX(0);
-    }
-
-    &.open .logo {
-      opacity: 0;
-    }
-
-    &.open .fa-times {
-      display: block;
-    }
-
-    &.open .fa-bars {
-      display: none;
-    }
-  }
-
-  .showcase {
-    width: 90%;
-  }
-
-  .video-main {
-    .hero {
-      h3 {
-        font-size: 2rem;
-      }
-    }
-  }
-
-  .menu {
-    .menu-list {
-      width: 30vw;
-    }
-
-    &.show {
-      .btn-toggler {
-        transform: translateX(28vw);
-      }
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  header {
-    .logo {
-      font-size: 1.8rem;
-    }
-  }
-
-  .showcase {
-    .showcase-inner {
-      flex-direction: column;
-      justify-content: space-between;
-
-      &-text {
-        text-align: center;
-        flex: 0 1 auto;
-        padding-top: 2rem;
-
-        .italic {
-          text-align: center;
-        }
-      }
-
-      &-image {
-        flex: 0 1 auto;
-      }
-    }
-  }
-
-  .test-content {
-    .box {
-      display: block;
-      padding: 0 1rem;
-    }
-
-    .test-title {
-      h1 {
-        font-size: 2.2rem;
-      }
-      h2 {
-        font-size: 1.2rem;
-      }
-    }
-  }
-
-  iframe {
-    width: 400px;
-    height: 220px;
-  }
-
-  .box6 {
-    & > div {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    img {
-      width: 50%;
-    }
-  }
-
-  .video-main {
-    .hero {
-      h3 {
-        font-size: 1.5rem;
-      }
-    }
-  }
-
-  .menu {
-    .menu-list {
-      width: 40vw;
-    }
-
-    &.show {
-      .btn-toggler {
-        transform: translateX(38vw);
-      }
-    }
-  }
-}
-
-@media (max-width: 500px) {
-  iframe {
-    width: 300px;
-    height: 185px;
-  }
-}
+@import "mobile";

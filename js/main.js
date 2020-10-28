@@ -1,3 +1,4 @@
+// Hamburger Menu
 $(document).ready(function () {
   $(".hamburger").on("click", function () {
     $("header").toggleClass("open");
@@ -9,10 +10,8 @@ $(document).ready(function () {
 
 // Scroll to top button //
 
-//Get the button:
 var mybutton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
   scrollFunction();
 };
@@ -25,14 +24,15 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+
+// Cross Browsers Smooth Scrolling
 $(document).ready(function () {
-  // Add smooth scrolling to all links
+  // Add smooth scrolling to all links with #
   $('a[href*="#"]').on("click", function (event) {
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
@@ -48,7 +48,7 @@ $(document).ready(function () {
         {
           scrollTop: $(hash).offset().top,
         },
-        800,
+        700,
         "linear",
         function () {
           // Add hash (#) to URL when done scrolling (default click behavior)
@@ -59,10 +59,13 @@ $(document).ready(function () {
   });
 });
 
+
+// Tests Page Menu button
 $(".test-menu-toggler").on("click", function () {
   $(".test-menu").toggleClass("show");
 });
 
+// Videos page Menu button
 $(".btn-toggler").on("click", function () {
   $(".menu").toggleClass("show");
 });
