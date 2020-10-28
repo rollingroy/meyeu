@@ -1,12 +1,11 @@
-$(document).ready(function() {
-	$(".hamburger").on('click', function() {
+$(document).ready(function () {
+  $(".hamburger").on("click", function () {
     $("header").toggleClass("open");
   });
-  $("a").on('click', function(){
-    $("header").removeClass('open');
-  })
+  $("a").on("click", function () {
+    $("header").removeClass("open");
+  });
 });
-
 
 // Scroll to top button //
 
@@ -60,9 +59,10 @@ $(document).ready(function () {
   });
 });
 
-const btnToggler = document.querySelector('.btn-toggler');
-const menu = document.querySelector('.menu');
+$(".test-menu-toggler").on("click", function () {
+  $(".test-menu").toggleClass("show");
+});
 
-btnToggler.addEventListener('click', function(){
-  menu.classList.toggle('show');
-})
+$(".btn-toggler").on("click", function () {
+  $(".menu").toggleClass("show");
+});
