@@ -291,7 +291,6 @@ header {
   border-bottom-right-radius: 7px;
   text-transform: uppercase;
   cursor: pointer;
-  z-index: 1;
   border: darken($purple-color, 6) 2px solid;
 }
 
@@ -305,6 +304,7 @@ header {
   transform: scale(0);
   transform-origin: top left;
   transition: all 0.5s ease;
+  z-index: -1;
 
   &-list {
     &-item {
@@ -444,6 +444,7 @@ header {
       font-size: 1.7rem;
       color: $pink-color;
       cursor: pointer;
+      z-index: 1;
 
       .fa-times {
         display: none;
@@ -461,7 +462,7 @@ header {
         align-items: center;
         justify-content: space-evenly;
         text-align: center;
-        z-index: -1;
+        // z-index: -1;
         transform: translateX(100%);
 
         li {
