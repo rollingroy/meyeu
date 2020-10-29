@@ -6,6 +6,17 @@ $light-green: #d9fff2;
 $pastel-blue: #c4eeff;
 $dark-purle: #a768fa;
 
+@mixin flexBox($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin transition($time: 0.5s) {
+  transition: all $time ease;
+}
+
 ul {
   list-style: none;
 }

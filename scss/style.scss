@@ -15,10 +15,8 @@ body {
 
 // Header
 header {
+  @include flexBox($justify: space-between);
   top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background-color: $light-blue;
   padding: 1rem 2rem;
   position: fixed;
@@ -54,7 +52,7 @@ header {
       font-weight: 500;
       letter-spacing: 0.15rem;
       position: relative;
-      transition: 0.5s transform ease;
+      @include transition;
 
       &:hover {
         transform: scale(1.2);
@@ -70,7 +68,7 @@ header {
         background: $pink-color;
         transform: scaleX(0);
         transform-origin: left;
-        transition: transform 0.5s ease;
+        @include transition;
       }
 
       &:hover::before {
@@ -88,18 +86,15 @@ header {
   height: 100%;
 
   .showcase-inner {
-    display: flex;
-    justify-content: center;
+    @include flexBox;
 
     & > div {
       margin: 0 1rem;
     }
 
     &-image {
-      display: flex;
-      flex-direction: column;
+      @include flexBox($direction: column);
       flex: 0 1 50vw;
-      align-items: center;
 
       img {
         border-radius: 2rem;
@@ -107,9 +102,7 @@ header {
     }
 
     &-text {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
+      @include flexBox($direction: column, $align: stretch);
       flex: 0 1 50vw;
       line-height: 1.5;
       letter-spacing: 0.05rem;
@@ -148,9 +141,9 @@ header {
     border-bottom-right-radius: 9px;
     padding-left: 1.2rem;
     transform: translateX(-12px);
-    transition: all 0.3s;
     border: darken($purple-color, 6) 2px solid;
     cursor: pointer;
+    @include transition(0.3s);
 
     &:hover {
       transform: translateX(0);
@@ -176,11 +169,10 @@ header {
   height: 100vh;
   top: 100%;
   left: -100%;
-  // left: 0;
   background: url(../img/image-from-rawpixel-id-1016768-jpeg.jpg) no-repeat;
   background-position-y: -20px;
   background-position-x: -20px;
-  transition: all 0.3s;
+  @include transition(0.3s);
 
   &-item {
     padding: 0.5rem 0;
@@ -193,15 +185,13 @@ header {
 }
 
 .video-main {
+  @include flexBox(column, center, center);
   width: 100%;
   padding-top: 3em;
-  display: flex;
-  flex-direction: column;
   text-align: center;
-  justify-content: center;
-  align-items: center;
 
   .hero {
+    @include flexBox;
     font-size: 2rem;
     font-family: "Mali", cursive;
     margin-bottom: 2rem;
@@ -210,9 +200,6 @@ header {
     height: 400px;
     min-height: 300px;
     background: url(../img/videobackground.jpg) no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     h3 {
       margin-top: 3rem;
@@ -259,7 +246,7 @@ header {
   border: 5px solid darken($pastel-blue, 10);
   transform: scale(0);
   transform-origin: top left;
-  transition: all 0.5s ease;
+  @include transition;
   z-index: -1;
 
   &-list {
@@ -271,7 +258,7 @@ header {
       a {
         display: inline-block;
         padding: 0 1rem;
-        transition: all 0.5s ease;
+        @include transition;
 
         &:hover {
           transform: scale(1.2);
@@ -355,10 +342,7 @@ header {
   }
 
   .box6 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexBox(column, center, center);
     background: #e5daff;
     text-align: center;
     border-radius: 2rem;
