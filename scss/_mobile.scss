@@ -1,5 +1,18 @@
 // Media Queries
-@media (max-width: 850px) {
+@media (max-width: 1024px) {
+  .menu {
+    &.show {
+      .btn-toggler {
+        transform: translateX(33vw);
+      }
+    }
+  }
+
+  .menu-list {
+    width: 34vw;
+  }
+}
+@media (max-width: 870px) {
   .buffer {
     height: 100px;
   }
@@ -99,15 +112,15 @@
   }
 
   .menu {
-    .menu-list {
-      width: 30vw;
-    }
-
     &.show {
       .btn-toggler {
-        transform: translateX(28vw);
+        transform: translateX(38vw);
       }
     }
+  }
+
+  .menu-list {
+    width: 40vw;
   }
 }
 
@@ -181,15 +194,15 @@
   }
 
   .menu {
-    .menu-list {
-      width: 40vw;
-    }
-
     &.show {
       .btn-toggler {
-        transform: translateX(38vw);
+        transform: translateX(60vw);
       }
     }
+  }
+
+  .menu-list {
+    width: 62vw;
   }
 }
 
@@ -197,5 +210,17 @@
   iframe {
     width: 300px;
     height: 185px;
+  }
+
+  .menu {
+    &.show {
+      .btn-toggler {
+        transform: translateX(68vw);
+      }
+    }
+  }
+
+  .menu-list {
+    width: 70vw;
   }
 }

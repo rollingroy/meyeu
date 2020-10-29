@@ -29,7 +29,6 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-
 // Cross Browsers Smooth Scrolling
 $(document).ready(function () {
   // Add smooth scrolling to all links with #
@@ -59,7 +58,6 @@ $(document).ready(function () {
   });
 });
 
-
 // Tests Page Menu button
 $(".test-menu-toggler").on("click", function () {
   $(".test-menu").toggleClass("show");
@@ -68,4 +66,5 @@ $(".test-menu-toggler").on("click", function () {
 // Videos page Menu button
 $(".btn-toggler").on("click", function () {
   $(".menu").toggleClass("show");
+  $("#header").toggleClass("active");
 });
