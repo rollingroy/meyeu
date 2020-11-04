@@ -25,7 +25,7 @@
       font-size: 1.7rem;
       color: $pink-color;
       cursor: pointer;
-      z-index: 1;
+      z-index: 3;
 
       .fa-times {
         display: none;
@@ -42,6 +42,7 @@
         height: 90%;
         text-align: center;
         // z-index: -1;
+        z-index: 2;
         transform: translateX(100%);
 
         li {

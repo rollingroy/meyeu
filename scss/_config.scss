@@ -60,3 +60,35 @@ img {
   transition: all 500ms ease;
 }
 /* END BACK TO TOP BUTTON */
+
+.text-center {
+  text-align: center;
+}
+
+.text-alert {
+  color: red;
+}
+
+.text-warning {
+  color: $dark-purle;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.bg-gray {
+  background: #f3f3f3;
+}
+
+.bg-light {
+  background: #e1f2ff;
+
+  td {
+    border: 1px solid #c7c7c7 !important;
+  }
+}
+
+.bg-dark {
+  background: darken(#d1e9ff, 20%);
+}
