@@ -372,32 +372,38 @@ header {
 
 // Objectives Page
 #objects {
-  header {
-    position: static;
-  }
-}
-.tableizer-table {
-  margin-top: 5rem;
-  border-collapse: collapse;
+  width: 100%;
 
-  td {
-    padding: 5px;
-    border: 1px solid #ddd;
-  }
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+    _overflow: auto;
+    margin: 0 0 1em;
 
-  .main-title {
-    background: $yellow-color;
-  }
+    .tableizer-table {
+      width: 100%;
+      border-collapse: collapse;
 
-  .fixed-row {
-    th {
-      border: 1px solid #ddd;
-      text-align: left;
-      padding: 5px;
-      position: -webkit-sticky;
-      position: sticky;
-      top: 0;
-      z-index: 1;
+      td {
+        padding: 4px;
+        border: 1px solid #ddd;
+      }
+
+      .main-title {
+        background: $yellow-color;
+      }
+
+      .fixed-row {
+        th {
+          border: 1px solid #ddd;
+          text-align: left;
+          position: -webkit-sticky;
+          position: sticky;
+          padding: 4px;
+          top: 0;
+          z-index: 1;
+        }
+      }
     }
   }
 }
