@@ -378,33 +378,22 @@ header {
 
   .table-container {
     width: 100%;
-    // overflow-x: auto;
-    // _overflow: auto;
+    overflow-x: auto;
+    _overflow: auto;
     margin: 0 0 1em;
 
     .tableizer-table {
       width: 100%;
       border-collapse: collapse;
 
-      td {
+      td,
+      th {
         padding: 4px;
         border: 1px solid #ddd;
       }
 
       .main-title {
         background: $yellow-color;
-      }
-
-      .fixed-row {
-        th {
-          border: 1px solid #ddd;
-          text-align: left;
-          padding: 4px;
-          top: 100px;
-          position: -webkit-sticky;
-          position: sticky;
-          z-index: 0;
-        }
       }
     }
   }
