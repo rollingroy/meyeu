@@ -22,6 +22,8 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1;
+  height: 100px;
+  min-height: 100px;
 }
 .hamburger {
   display: none;
@@ -376,8 +378,8 @@ header {
 
   .table-container {
     width: 100%;
-    overflow-x: auto;
-    _overflow: auto;
+    // overflow-x: auto;
+    // _overflow: auto;
     margin: 0 0 1em;
 
     .tableizer-table {
@@ -397,10 +399,10 @@ header {
         th {
           border: 1px solid #ddd;
           text-align: left;
+          padding: 4px;
+          top: 100px;
           position: -webkit-sticky;
           position: sticky;
-          padding: 4px;
-          top: 0;
           z-index: 1;
         }
       }
