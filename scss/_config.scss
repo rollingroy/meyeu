@@ -5,6 +5,7 @@ $purple-color: #dfdaff;
 $light-green: #d9fff2;
 $pastel-blue: #c4eeff;
 $dark-purle: #a768fa;
+$dark-color: #000;
 
 @mixin flexBox($direction: row, $justify: center, $align: center) {
   display: flex;

@@ -376,6 +376,53 @@ header {
   }
 }
 
+// Test Page second design //
+#test2 {
+  background: url(../img/winter-2840549_1280.png) no-repeat center center/cover;
+  background-attachment: fixed;
+
+  header {
+    background-color: rgba(white, 0.9);
+    a {
+      color: rgb(36, 90, 26);
+    }
+
+    .test-menu {
+      a {
+        color: black;
+      }
+    }
+  }
+
+  .test-content {
+    .test-title {
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  .question-wrapper {
+    background: rgb(32, 151, 32);
+    color: white;
+    border: 4px dotted white;
+  }
+
+  .box6 {
+    background: #e5daff94;
+
+    .question-wrapper {
+      background: none;
+      color: black;
+      border: none;
+    }
+
+    h3 {
+      span {
+        color: blue;
+      }
+    }
+  }
+}
+
 // Objectives Page
 #objects {
   width: 100%;
